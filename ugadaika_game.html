@@ -1,0 +1,26 @@
+<meta charset="utf-8">
+<script>
+
+	var answer = parseInt(Math.random() * 10);
+	var userAnswer = +prompt("Угадай число от 0 до 10");
+	var maxTryCount = 3;
+
+	for (var tryCount = 1; tryCount < maxTryCount; tryCount++) {
+		if (userAnswer == answer) {
+			alert("Заебок! Успех! :)) ");
+			break;
+
+		} else if (userAnswer > answer) {
+			alert("Перебор :(( ");
+		} else if (userAnswer < answer) {
+			alert("Недобор :(( ");
+		}
+
+		userAnswer = +prompt("Валяй ещё. Давай число от 0 до 10\nВынимание, осталось " + (maxTryCount - tryCount) + " попыткас");
+	}
+
+	if (tryCount == maxTryCount)
+		alert("Увы и нах.., но проёб :(((((((");
+	alert("Это число " + answer);
+
+</script>
